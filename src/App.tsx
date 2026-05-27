@@ -54,10 +54,6 @@ export default function App() {
                 referrerPolicy="no-referrer"
               />
             </div>
-            {/* Crown decoration badge */}
-            <span className="absolute -top-1 -right-1 bg-gradient-to-r from-brand-sky to-brand-navy text-white rounded-full p-1.5 shadow-md flex items-center justify-center">
-              <Sparkles className="w-3.5 h-3.5 text-yellow-300" />
-            </span>
           </div>
 
           {/* Core Branding Typography */}
