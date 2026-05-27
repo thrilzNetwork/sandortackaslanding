@@ -58,6 +58,9 @@ export default function App() {
 
           {/* Core Branding Typography */}
           <div className="space-y-1">
+            <h2 className="text-xs font-mono font-bold text-brand-sky uppercase tracking-[0.2em]">
+              Sandor Tackas
+            </h2>
             <h1 className="font-display font-black text-2xl text-brand-navy tracking-wider uppercase">
               ST IMPORTACIONES
             </h1>
