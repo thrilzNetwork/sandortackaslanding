@@ -131,7 +131,7 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
             {/* Header */}
             <div className="sticky top-0 bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between z-10" id="paca-header">
               <div className="flex items-center space-x-2">
-                <span className="p-2 bg-pink-100 rounded-lg text-pink-500">
+                <span className="p-2 bg-brand-sky/10 rounded-lg text-brand-sky">
                   <Calculator className="w-5 h-5 animate-pulse" />
                 </span>
                 <div>
@@ -154,7 +154,7 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
               {/* Select Vendor and Quantity */}
               <div className="space-y-4">
                 <h4 className="font-sans font-bold text-gray-800 text-sm flex items-center gap-1.5">
-                  <ShoppingBag className="w-4 h-4 text-pink-500" /> 1. Elige tu Marca & Proveedor
+                  <ShoppingBag className="w-4 h-4 text-brand-sky" /> 1. Elige tu Marca & Proveedor
                 </h4>
                 <div className="grid grid-cols-3 gap-2">
                   {(["Shein", "Zara", "Pat Pat"] as VendorType[]).map((v) => (
@@ -164,7 +164,7 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
                       onClick={() => handleVendorChange(v)}
                       className={`py-3 px-1.5 text-xs font-bold rounded-xl border text-center transition-all ${
                         vendor === v
-                          ? "bg-pink-500 text-white border-pink-500 shadow-lg shadow-pink-500/20"
+                          ? "bg-brand-sky text-white border-brand-sky shadow-lg shadow-brand-sky/20"
                           : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
                       }`}
                     >
@@ -178,10 +178,10 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
               </div>
 
               {/* Slider for Quantity */}
-              <div className="space-y-3 bg-pink-50/40 p-4 rounded-xl border border-pink-100">
+              <div className="space-y-3 bg-brand-sky/5 p-4 rounded-xl border border-brand-sky/10">
                 <div className="flex justify-between items-center text-xs">
                   <span className="font-semibold text-gray-700">Cantidad de prendas en la paca:</span>
-                  <span className="font-mono bg-pink-100 text-pink-700 px-2 py-0.5 rounded-md font-bold">
+                  <span className="font-mono bg-brand-sky/15 text-brand-navy px-2 py-0.5 rounded-md font-bold">
                     {quantity} unidades
                   </span>
                 </div>
@@ -192,7 +192,7 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
                   step="10"
                   value={quantity}
                   onChange={(e) => setQuantity(Number(e.target.value))}
-                  className="w-full accent-pink-500 h-2 bg-pink-200 rounded-lg appearance-none cursor-pointer"
+                  className="w-full accent-brand-sky h-2 bg-brand-sky/20 rounded-lg appearance-none cursor-pointer"
                 />
                 <div className="flex justify-between text-[10px] text-gray-400 font-mono">
                   <span>20 c/u</span>
@@ -205,32 +205,32 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
               {/* Shipping Logistics Settings */}
               <div className="space-y-4">
                 <h4 className="font-sans font-bold text-gray-800 text-sm flex items-center gap-1.5">
-                  <Truck className="w-4 h-4 text-pink-500" /> 2. Tarifas y Vía de Transporte
+                  <Truck className="w-4 h-4 text-brand-sky" /> 2. Tarifas y Vía de Transporte
                 </h4>
                 <div className="grid grid-cols-2 gap-4">
                   <button
                     type="button"
                     onClick={() => setShippingMode("air")}
-                    className={`p-3.5 rounded-xl border text-left transition ${
+                    className={`p-3.5 rounded-xl border text-left transition-all ${
                       shippingMode === "air"
-                        ? "bg-pink-50 text-pink-700 border-pink-400 font-bold"
+                        ? "bg-brand-sky/10 text-brand-navy border-brand-sky/35 font-bold"
                         : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
                     }`}
                   >
-                    <div className="text-xs font-semibold">Aéreo Expreso</div>
-                    <div className="text-[10px] text-gray-500 font-mono mt-0.5">$4.50 por Libra • 5-7 días</div>
+                    <div className="text-xs font-semibold font-bold">Aéreo Expreso</div>
+                    <div className="text-[10px] text-brand-navy/60 font-mono mt-0.5">$4.50 por Libra • 5-7 días</div>
                   </button>
                   <button
                     type="button"
                     onClick={() => setShippingMode("sea")}
-                    className={`p-3.5 rounded-xl border text-left transition ${
+                    className={`p-3.5 rounded-xl border text-left transition-all ${
                       shippingMode === "sea"
-                        ? "bg-pink-50 text-pink-700 border-pink-400 font-bold"
+                        ? "bg-brand-sky/10 text-brand-navy border-brand-sky/35 font-bold"
                         : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
                     }`}
                   >
-                    <div className="text-xs font-semibold">Marítimo Consolidado</div>
-                    <div className="text-[10px] text-gray-500 font-mono mt-0.5">$1.80 por Libra • 15-20 días</div>
+                    <div className="text-xs font-semibold font-bold">Marítimo Consolidado</div>
+                    <div className="text-[10px] text-brand-navy/60 font-mono mt-0.5">$1.80 por Libra • 15-20 días</div>
                   </button>
                 </div>
               </div>
@@ -248,7 +248,7 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
                       max="20"
                       value={customCostPerPiece}
                       onChange={(e) => setCustomCostPerPiece(Number(e.target.value))}
-                      className="w-full text-sm bg-white border border-gray-200 rounded-xl pl-7 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition"
+                      className="w-full text-sm bg-white border border-gray-200 rounded-xl pl-7 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-sky focus:border-transparent transition"
                     />
                   </div>
                   <span className="text-[10px] text-gray-400 block italic leading-tight">Valor promedio negociado directo de fábrica</span>
@@ -262,7 +262,7 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
                     max="50"
                     value={taxRate}
                     onChange={(e) => setTaxRate(Number(e.target.value))}
-                    className="w-full text-sm bg-white border border-gray-200 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition"
+                    className="w-full text-sm bg-white border border-gray-200 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-sky focus:border-transparent transition"
                   />
                   <span className="text-[10px] text-gray-400 block italic leading-tight">Arancel legal según el aduana de tu país</span>
                 </div>
@@ -270,7 +270,7 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
 
               {/* Cost calculation result card */}
               <div className="bg-slate-900 text-white rounded-2xl p-5 shadow-inner">
-                <div className="text-xs font-mono text-pink-400 uppercase tracking-wider mb-2">Desglose de Costos de Importación</div>
+                <div className="text-xs font-mono text-brand-sky uppercase tracking-wider mb-2">Desglose de Costos de Importación</div>
                 <div className="space-y-2.5 text-xs text-slate-300">
                   <div className="flex justify-between">
                     <span>Costo Neto Mercancía ({quantity} unidades x ${customCostPerPiece.toFixed(2)})</span>
@@ -292,11 +292,11 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
                   {/* Results row */}
                   <div className="flex justify-between pt-1.5">
                     <span className="text-sm font-bold text-white">Inversión Final Total</span>
-                    <span className="text-base font-extrabold text-pink-400">${stats.totalInvestment.toFixed(2)} USD</span>
+                    <span className="text-base font-extrabold text-brand-sky">${stats.totalInvestment.toFixed(2)} USD</span>
                   </div>
                   <div className="flex justify-between bg-slate-800/40 p-2.5 rounded-xl border border-slate-800/80 mt-2">
                     <span className="text-slate-200">Costo Final Puesto en tu Bodega (Unitario):</span>
-                    <span className="font-bold text-white font-mono bg-pink-500/20 px-2 py-0.5 rounded">${stats.landedCostPerUnit.toFixed(2)} USD</span>
+                    <span className="font-bold text-white font-mono bg-brand-sky/20 px-2 py-0.5 rounded">${stats.landedCostPerUnit.toFixed(2)} USD</span>
                   </div>
                 </div>
               </div>
@@ -304,15 +304,15 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
               {/* Projection of Sales / Earnings Markup */}
               <div className="space-y-4" id="projection-section">
                 <h4 className="font-sans font-bold text-gray-800 text-sm flex items-center gap-1.5">
-                  <DollarSign className="w-4 h-4 text-pink-500" /> 3. Proyección Comercial de Ventas
+                  <DollarSign className="w-4 h-4 text-brand-sky" /> 3. Proyección Comercial de Ventas
                 </h4>
                 
-                <div className="bg-pink-50/30 p-5 rounded-2xl border border-pink-100 flex flex-col md:flex-row gap-5 items-center justify-between">
+                <div className="bg-brand-sky/5 p-5 rounded-2xl border border-brand-sky/10 flex flex-col md:flex-row gap-5 items-center justify-between">
                   {/* Price Setting Slider */}
                   <div className="flex-1 w-full space-y-2">
                     <div className="flex justify-between text-xs">
                       <span className="font-semibold text-gray-700">Precio de Venta Sugerido (Unitario):</span>
-                      <span className="font-mono bg-pink-100 text-pink-700 px-2 py-0.5 rounded font-bold">
+                      <span className="font-mono bg-brand-sky/15 text-brand-navy px-2 py-0.5 rounded font-bold">
                         ${customSellingPrice.toFixed(2)} USD c/u
                       </span>
                     </div>
@@ -323,7 +323,7 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
                       step="1"
                       value={customSellingPrice}
                       onChange={(e) => setCustomSellingPrice(Number(e.target.value))}
-                      className="w-full accent-pink-500 h-2 bg-pink-200 rounded-lg appearance-none cursor-pointer"
+                      className="w-full accent-brand-sky h-2 bg-brand-sky/20 rounded-lg appearance-none cursor-pointer"
                     />
                     <div className="flex justify-between text-[9px] text-gray-400 font-mono">
                       <span>Mín: ${Math.ceil(stats.landedCostPerUnit) + 1} USD</span>
@@ -369,7 +369,7 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
                     const message = `¡Hola EMPRENDELANDIA! Utilicé la calculadora de pacas. Estoy interesado en un lote de ${quantity} prendas de ${vendor} vía ${shippingMode === "air" ? "aéreo" : "marítimo"}. Mis ganancias estimadas son de $${stats.netProfit.toFixed(2)} USD con un ROI del ${stats.roiPercent}%. ¿Me ayudan a concretar este pedido?`;
                     window.open(`https://wa.me/50760000000?text=${encodeURIComponent(message)}`, "_blank");
                   }}
-                  className="flex-1 bg-pink-500 hover:bg-pink-600 text-white font-semibold text-xs py-3 px-4 rounded-xl flex items-center justify-center space-x-2 shadow-lg shadow-pink-500/10 hover:shadow-pink-500/20 transition-all"
+                  className="flex-1 bg-brand-navy hover:brightness-110 text-white font-semibold text-xs py-3 px-4 rounded-xl flex items-center justify-center space-x-2 shadow-lg shadow-brand-navy/10 transition-all"
                   id="order-paca"
                 >
                   <span>Iniciar Pedido en WhatsApp</span>

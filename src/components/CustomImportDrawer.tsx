@@ -84,7 +84,7 @@ export default function CustomImportDrawer({ isOpen, onClose }: CustomImportDraw
             {/* Header */}
             <div className="sticky top-0 bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between z-10" id="custom-import-header">
               <div className="flex items-center space-x-2">
-                <span className="p-2 bg-pink-100 rounded-lg text-pink-500">
+                <span className="p-2 bg-brand-sky/10 rounded-lg text-brand-sky">
                   <Globe className="w-5 h-5 animate-pulse" />
                 </span>
                 <div>
@@ -116,7 +116,7 @@ export default function CustomImportDrawer({ isOpen, onClose }: CustomImportDraw
                         onClick={() => setOrigin(c)}
                         className={`py-2 text-xs font-bold rounded-lg border text-center transition-all ${
                           origin === c
-                            ? "bg-pink-500 text-white border-pink-500 shadow"
+                            ? "bg-brand-sky text-white border-brand-sky shadow"
                             : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
                         }`}
                       >
@@ -136,7 +136,7 @@ export default function CustomImportDrawer({ isOpen, onClose }: CustomImportDraw
                         onClick={() => setMethod(m)}
                         className={`py-2 text-[10px] font-bold rounded-lg border text-center transition-all ${
                           method === m
-                            ? "bg-pink-500 text-white border-pink-500 shadow"
+                            ? "bg-brand-sky text-white border-brand-sky shadow"
                             : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
                         }`}
                       >
@@ -148,12 +148,12 @@ export default function CustomImportDrawer({ isOpen, onClose }: CustomImportDraw
               </div>
 
               {/* Slider Input Values */}
-              <div className="space-y-4 bg-pink-50/20 p-4 rounded-xl border border-pink-100/50">
+              <div className="space-y-4 bg-brand-sky/5 p-4 rounded-xl border border-brand-sky/10">
                 {/* Weight Input */}
                 <div className="space-y-2">
                   <div className="flex justify-between items-center text-xs">
                     <span className="font-semibold text-gray-700">Peso estimado del bulto:</span>
-                    <span className="font-mono bg-pink-100 text-pink-700 px-2 py-0.5 rounded font-bold">{weightLbs} libras</span>
+                    <span className="font-mono bg-brand-sky/15 text-brand-navy px-2 py-0.5 rounded font-bold">{weightLbs} libras</span>
                   </div>
                   <input
                     type="range"
@@ -161,7 +161,7 @@ export default function CustomImportDrawer({ isOpen, onClose }: CustomImportDraw
                     max="150"
                     value={weightLbs}
                     onChange={(e) => setWeightLbs(Number(e.target.value))}
-                    className="w-full accent-pink-500 h-1.5 bg-pink-100 rounded-lg appearance-none cursor-pointer"
+                    className="w-full accent-brand-sky h-1.5 bg-brand-sky/20 rounded-lg appearance-none cursor-pointer"
                   />
                 </div>
 
@@ -169,7 +169,7 @@ export default function CustomImportDrawer({ isOpen, onClose }: CustomImportDraw
                 <div className="space-y-2">
                   <div className="flex justify-between items-center text-xs">
                     <span className="font-semibold text-gray-700">Valor de factura total declarado (Mercancía USD):</span>
-                    <span className="font-mono bg-pink-100 text-pink-700 px-2 py-0.5 rounded font-bold">${declaredValueUSD} USD</span>
+                    <span className="font-mono bg-brand-sky/15 text-brand-navy px-2 py-0.5 rounded font-bold">${declaredValueUSD} USD</span>
                   </div>
                   <input
                     type="range"
@@ -178,14 +178,14 @@ export default function CustomImportDrawer({ isOpen, onClose }: CustomImportDraw
                     step="10"
                     value={declaredValueUSD}
                     onChange={(e) => setDeclaredValueUSD(Number(e.target.value))}
-                    className="w-full accent-pink-500 h-1.5 bg-pink-100 rounded-lg appearance-none cursor-pointer"
+                    className="w-full accent-brand-sky h-1.5 bg-brand-sky/20 rounded-lg appearance-none cursor-pointer"
                   />
                 </div>
               </div>
 
               {/* Real-time tax / shipping display */}
               <div className="bg-slate-900 text-white rounded-2xl p-5 shadow-lg">
-                <div className="text-xs font-mono text-pink-400 uppercase tracking-wider mb-2.5">
+                <div className="text-xs font-mono text-brand-sky uppercase tracking-wider mb-2.5">
                   Liquidación Estimada de Aduana
                 </div>
                 <div className="space-y-2.5 text-xs text-slate-300">
@@ -209,7 +209,7 @@ export default function CustomImportDrawer({ isOpen, onClose }: CustomImportDraw
                   {/* Result row */}
                   <div className="flex justify-between pt-1.5">
                     <span className="text-sm font-bold text-white">Costo Total Logístico Local</span>
-                    <span className="text-base font-extrabold text-pink-400 font-mono">${costs.totalLocalPay.toFixed(2)} USD</span>
+                    <span className="text-base font-extrabold text-brand-sky font-mono">${costs.totalLocalPay.toFixed(2)} USD</span>
                   </div>
                 </div>
               </div>
@@ -218,9 +218,9 @@ export default function CustomImportDrawer({ isOpen, onClose }: CustomImportDraw
               <div className="space-y-3" id="checklist-section">
                 <div className="flex justify-between items-center border-b pb-2">
                   <h4 className="font-sans font-bold text-gray-800 text-sm flex items-center gap-1.5">
-                    <ClipboardCheck className="w-4 h-4 text-pink-500" /> Checklist de Ruta de Importación
+                    <ClipboardCheck className="w-4 h-4 text-brand-sky" /> Checklist de Ruta de Importación
                   </h4>
-                  <span className="text-[10px] bg-pink-100 text-pink-700 font-bold px-2.5 py-0.5 rounded-full font-mono">
+                  <span className="text-[10px] bg-brand-sky/15 text-brand-navy font-bold px-2.5 py-0.5 rounded-full font-mono">
                     {completedCount} / {checklist.length} Completados
                   </span>
                 </div>
@@ -231,7 +231,7 @@ export default function CustomImportDrawer({ isOpen, onClose }: CustomImportDraw
                       type="button"
                       key={step.id}
                       onClick={() => toggleChecklistStep(step.id)}
-                      className={`w-full text-left p-3 rounded-xl border text-xs flex items-start space-x-3 transition ${
+                      className={`w-full text-left p-3 rounded-xl border text-xs flex items-start space-x-3 transition-all cursor-pointer ${
                         step.completed
                           ? "bg-emerald-50/50 border-emerald-200 text-gray-500"
                           : "bg-white border-gray-100 text-gray-700 hover:bg-gray-50"
@@ -250,8 +250,8 @@ export default function CustomImportDrawer({ isOpen, onClose }: CustomImportDraw
               </div>
 
               {/* Help segment */}
-              <div className="bg-pink-50/30 border border-pink-100 rounded-xl p-4 flex items-start space-x-3 text-xs text-gray-600 leading-relaxed">
-                <HelpIcon className="w-5 h-5 text-pink-500 flex-shrink-0 mt-0.5" />
+              <div className="bg-brand-sky/5 border border-brand-sky/10 rounded-xl p-4 flex items-start space-x-3 text-xs text-gray-600 leading-relaxed">
+                <HelpIcon className="w-5 h-5 text-brand-sky flex-shrink-0 mt-0.5" />
                 <p>
                   <strong>¿Tienes dudas con la clasificación de tu mercancía?</strong> Algunos países exigen fito-sanitarios para cosméticos o ropa infantil. Consúltalo hoy mismo con nuestro Asistente Inteligente de manera gratuita para evitar retenciones de aduana.
                 </p>

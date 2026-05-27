@@ -131,12 +131,12 @@ export default function GeminiChatDrawer({ isOpen, onClose }: GeminiChatDrawerPr
             {/* Header */}
             <div className="sticky top-0 bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between z-10" id="chat-header">
               <div className="flex items-center space-x-2">
-                <span className="p-2 bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl text-white shadow-md shadow-pink-500/20">
-                  <Sparkles className="w-5 h-5" />
+                <span className="p-2 bg-gradient-to-r from-brand-navy to-brand-sky rounded-xl text-white shadow-md shadow-brand-sky/20 px-3 py-2.5">
+                  <Sparkles className="w-5 h-5 text-yellow-300 animate-pulse" />
                 </span>
                 <div>
                   <h2 className="font-sans font-bold text-base text-gray-900 tracking-tight">Asistente Inteligente</h2>
-                  <p className="text-[10px] uppercase tracking-wider text-pink-500 font-extrabold flex items-center gap-1">
+                  <p className="text-[10px] uppercase tracking-wider text-brand-sky font-extrabold flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" /> Emprendelandia AI Consejero
                   </p>
                 </div>
@@ -175,7 +175,7 @@ export default function GeminiChatDrawer({ isOpen, onClose }: GeminiChatDrawerPr
                       className={`max-w-[85%] text-xs rounded-2xl px-4 py-3 shadow-sm ${
                         isAI
                           ? "bg-white text-gray-800 border border-gray-100 rounded-tl-none leading-relaxed"
-                          : "bg-pink-500 text-white rounded-tr-none leading-relaxed font-medium"
+                          : "bg-brand-navy text-white rounded-tr-none leading-relaxed font-semibold"
                       }`}
                     >
                       <p className="whitespace-pre-wrap">{m.content}</p>
@@ -187,7 +187,7 @@ export default function GeminiChatDrawer({ isOpen, onClose }: GeminiChatDrawerPr
               {isLoading && (
                 <div className="flex justify-start">
                   <div className="bg-white border border-gray-100 text-gray-500 text-xs rounded-2xl rounded-tl-none px-4 py-3 flex items-center space-x-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-pink-500 animate-spin" />
+                    <Sparkles className="w-3.5 h-3.5 text-brand-sky animate-spin" />
                     <span className="font-mono text-[10px]">Asesor analizando fletes...</span>
                   </div>
                 </div>
@@ -198,7 +198,7 @@ export default function GeminiChatDrawer({ isOpen, onClose }: GeminiChatDrawerPr
             {/* Quick Prompts Panel */}
             <div className="bg-white border-t border-gray-100 px-6 py-3" id="quick-prompts-bar">
               <span className="text-[10px] uppercase font-mono tracking-wider font-extrabold text-gray-400 block mb-2 flex items-center gap-1">
-                <Compass className="w-3 h-3 text-pink-500" /> Consultas Rápidas Recomendadas:
+                <Compass className="w-3 h-3 text-brand-sky" /> Consultas Rápidas Recomendadas:
               </span>
               <div className="flex flex-wrap gap-1.5">
                 {quickPrompts.map((prompt, idx) => (
@@ -206,7 +206,7 @@ export default function GeminiChatDrawer({ isOpen, onClose }: GeminiChatDrawerPr
                     key={idx}
                     type="button"
                     onClick={() => handleSendMessage(prompt)}
-                    className="text-left text-[11px] bg-slate-50 hover:bg-pink-50 hover:text-pink-600 px-3 py-1.5 rounded-full border border-gray-100 text-gray-600 transition"
+                    className="text-left text-[11px] bg-slate-50 hover:bg-brand-sky/10 hover:text-brand-sky hover:border-brand-sky/20 px-3 py-1.5 rounded-full border border-gray-100 text-gray-600 transition"
                   >
                     {prompt}
                   </button>
@@ -222,13 +222,13 @@ export default function GeminiChatDrawer({ isOpen, onClose }: GeminiChatDrawerPr
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   placeholder="Escribe tu duda sobre aduanas o mercadería..."
-                  className="flex-grow text-xs bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white focus:border-transparent transition"
+                  className="flex-grow text-xs bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-sky focus:bg-white focus:border-transparent transition"
                   maxLength={500}
                 />
                 <button
                   type="submit"
                   disabled={!inputValue.trim() || isLoading}
-                  className="bg-pink-500 hover:bg-pink-600 text-white rounded-xl p-3 shadow-lg shadow-pink-500/10 hover:shadow-pink-500/20 transition disabled:opacity-40"
+                  className="bg-brand-navy hover:bg-brand-navy/95 text-white rounded-xl p-3 shadow-lg shadow-brand-navy/10 transition disabled:opacity-40 cursor-pointer"
                   aria-label="Enviar mensaje"
                   id="send-chat-message"
                 >

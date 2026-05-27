@@ -36,7 +36,7 @@ export default function App() {
     <div className="min-h-screen bg-slate-50 font-sans relative flex flex-col justify-between overflow-x-hidden" id="app-viewport">
       
       {/* Background Ambience Graphics */}
-      <div className="absolute top-0 inset-x-0 h-[380px] bg-gradient-to-b from-pink-100/50 via-rose-50/30 to-transparent pointer-events-none z-0"></div>
+      <div className="absolute top-0 inset-x-0 h-[380px] bg-gradient-to-b from-brand-sky/15 via-brand-navy/5 to-transparent pointer-events-none z-0"></div>
       
       {/* Principal Container (Centered link-in-bio style card) */}
       <main className="w-full max-w-md mx-auto px-4 py-8 relative z-10 flex-grow flex flex-col justify-start space-y-6">
@@ -45,8 +45,8 @@ export default function App() {
         <section className="text-center space-y-4" id="profile-section">
           {/* Main Hero Avatar illustration matching original */}
           <div className="relative inline-block" id="avatar-container">
-            <div className="absolute inset-0 bg-gradient-to-tr from-pink-500 to-rose-400 rounded-full blur-sm opacity-60 animate-pulse"></div>
-            <div className="relative w-28 h-28 bg-white p-[3px] rounded-full shadow-lg border border-pink-100">
+            <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy to-brand-sky rounded-full blur-sm opacity-60 animate-pulse"></div>
+            <div className="relative w-28 h-28 bg-white p-[3px] rounded-full shadow-lg border border-brand-sky/20">
               <img
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=350&h=350"
                 alt="Emprendelandia Mentor"
@@ -55,18 +55,18 @@ export default function App() {
               />
             </div>
             {/* Crown decoration badge */}
-            <span className="absolute -top-1 -right-1 bg-gradient-to-r from-yellow-400 to-amber-500 text-white rounded-full p-1.5 shadow-md flex items-center justify-center">
-              <Sparkles className="w-3.5 h-3.5" />
+            <span className="absolute -top-1 -right-1 bg-gradient-to-r from-brand-sky to-brand-navy text-white rounded-full p-1.5 shadow-md flex items-center justify-center">
+              <Sparkles className="w-3.5 h-3.5 text-yellow-300" />
             </span>
           </div>
 
           {/* Core Branding Typography */}
           <div className="space-y-1">
-            <h1 className="font-display font-black text-2xl text-gray-900 tracking-wider uppercase">
+            <h1 className="font-display font-black text-2xl text-brand-navy tracking-wider uppercase">
               EMPRENDELANDIA
             </h1>
-            <p className="text-xs text-pink-600 font-extrabold uppercase tracking-widest flex items-center justify-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+            <p className="text-xs text-brand-sky font-extrabold uppercase tracking-widest flex items-center justify-center gap-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-sky"></span>
               Aduanas & Sourcing Mayorista
             </p>
           </div>
@@ -155,12 +155,12 @@ export default function App() {
             whileHover={{ scale: 1.015 }}
             whileTap={{ scale: 0.985 }}
             onClick={() => setActiveDrawer("panama")}
-            className="w-full bg-[#f259c7] hover:bg-[#eb4bc1] text-white p-4.5 rounded-3xl shadow-lg border border-pink-400/20 text-left relative overflow-hidden transition-colors flex items-center group cursor-pointer"
+            className="w-full bg-brand-navy hover:bg-brand-navy/90 text-white p-4.5 rounded-3xl shadow-md border border-brand-sky/20 text-left relative overflow-hidden transition-all flex items-center group cursor-pointer"
             id="btn-panama-trip"
           >
             {/* Visual Thumbnail Frame */}
             <div className="w-11 h-11 bg-white p-[2px] rounded-full shadow-inner flex-shrink-0 mr-4 flex items-center justify-center overflow-hidden">
-              <div className="w-full h-full bg-pink-100 rounded-full flex items-center justify-center text-pink-600">
+              <div className="w-full h-full bg-brand-sky/10 rounded-full flex items-center justify-center text-brand-sky">
                 <MapPin className="w-5 h-5" />
               </div>
             </div>
@@ -169,7 +169,7 @@ export default function App() {
               <h3 className="font-sans font-extrabold text-sm md:text-base leading-tight uppercase tracking-tight">
                 VIAJE DE NEGOCIOS PANAMA 2026
               </h3>
-              <p className="text-[10px] text-pink-100 uppercase tracking-widest font-semibold mt-0.5 font-mono">
+              <p className="text-[10px] text-brand-sky/80 uppercase tracking-widest font-semibold mt-0.5 font-mono">
                 Misión de Sourcing • Del 14 al 20 de Junio 2026
               </p>
             </div>
@@ -180,12 +180,12 @@ export default function App() {
             whileHover={{ scale: 1.015 }}
             whileTap={{ scale: 0.985 }}
             onClick={() => setActiveDrawer("paca")}
-            className="w-full bg-[#f259c7] hover:bg-[#eb4bc1] text-white p-4.5 rounded-3xl shadow-lg border border-pink-400/20 text-left relative overflow-hidden transition-colors flex items-center group cursor-pointer"
+            className="w-full bg-brand-navy hover:bg-brand-navy/90 text-white p-4.5 rounded-3xl shadow-md border border-brand-sky/20 text-left relative overflow-hidden transition-all flex items-center group cursor-pointer"
             id="btn-paca-calculator"
           >
             {/* Visual Thumbnail */}
             <div className="w-11 h-11 bg-white p-[2px] rounded-full shadow-inner flex-shrink-0 mr-4 flex items-center justify-center overflow-hidden">
-              <div className="w-full h-full bg-pink-100 rounded-full flex items-center justify-center text-pink-600">
+              <div className="w-full h-full bg-brand-sky/10 rounded-full flex items-center justify-center text-brand-sky">
                 <ShoppingBag className="w-5 h-5" />
               </div>
             </div>
@@ -193,7 +193,7 @@ export default function App() {
               <h3 className="font-sans font-extrabold text-sm md:text-base leading-tight uppercase tracking-tight">
                 IMPORTAMOS PACAS POR TI
               </h3>
-              <p className="text-[10px] text-pink-100 uppercase tracking-widest font-semibold mt-0.5 font-mono">
+              <p className="text-[10px] text-brand-sky/80 uppercase tracking-widest font-semibold mt-0.5 font-mono">
                 Calculadora Lotes • Zara, Shein & Pat Pat
               </p>
             </div>
@@ -204,11 +204,11 @@ export default function App() {
             whileHover={{ scale: 1.015 }}
             whileTap={{ scale: 0.985 }}
             onClick={() => setActiveDrawer("custom")}
-            className="w-full bg-[#f259c7] hover:bg-[#eb4bc1] text-white p-4.5 rounded-3xl shadow-lg border border-pink-400/20 text-left relative overflow-hidden transition-colors flex items-center group cursor-pointer"
+            className="w-full bg-brand-navy hover:bg-brand-navy/90 text-white p-4.5 rounded-3xl shadow-md border border-brand-sky/20 text-left relative overflow-hidden transition-all flex items-center group cursor-pointer"
             id="btn-custom-import"
           >
             <div className="w-11 h-11 bg-white p-[2px] rounded-full shadow-inner flex-shrink-0 mr-4 flex items-center justify-center overflow-hidden">
-              <div className="w-full h-full bg-pink-100 rounded-full flex items-center justify-center text-pink-600">
+              <div className="w-full h-full bg-brand-sky/10 rounded-full flex items-center justify-center text-brand-sky">
                 <Compass className="w-5 h-5" />
               </div>
             </div>
@@ -216,7 +216,7 @@ export default function App() {
               <h3 className="font-sans font-extrabold text-sm md:text-base leading-tight uppercase tracking-tight">
                 ¿IMPORTAS POR TU CUENTA?
               </h3>
-              <p className="text-[10px] text-pink-100 uppercase tracking-widest font-semibold mt-0.5 font-mono">
+              <p className="text-[10px] text-brand-sky/80 uppercase tracking-widest font-semibold mt-0.5 font-mono">
                 Casillero de Carga • Tasas de Aduanas & Guía
               </p>
             </div>
@@ -227,7 +227,7 @@ export default function App() {
             whileHover={{ scale: 1.015 }}
             whileTap={{ scale: 0.985 }}
             onClick={() => setActiveDrawer("chat")}
-            className="w-full bg-gradient-to-r from-pink-600 to-[#eb4bc1] hover:from-pink-700 hover:to-pink-600 text-white p-4.5 rounded-3xl shadow-xl border border-pink-400/30 text-left relative overflow-hidden transition-all flex items-center group cursor-pointer"
+            className="w-full bg-gradient-to-r from-brand-navy via-brand-sky/90 to-brand-sky hover:brightness-110 text-white p-4.5 rounded-3xl shadow-lg border border-brand-sky/30 text-left relative overflow-hidden transition-all flex items-center group cursor-pointer"
             id="btn-ai-chat"
           >
             {/* Sparkle border trace */}
@@ -268,7 +268,7 @@ export default function App() {
                 placeholder="tu@correo.com"
                 value={emailSub}
                 onChange={(e) => setEmailSub(e.target.value)}
-                className="flex-grow text-xs bg-slate-50 border border-gray-200 rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition"
+                className="flex-grow text-xs bg-slate-50 border border-gray-200 rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-brand-sky focus:bg-white transition"
               />
               <button
                 type="submit"

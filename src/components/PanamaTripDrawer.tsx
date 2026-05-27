@@ -127,7 +127,7 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
             {/* Header */}
             <div className="sticky top-0 bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between z-10" id="trip-header">
               <div className="flex items-center space-x-2">
-                <span className="p-2 bg-pink-100 rounded-lg text-pink-500">
+                <span className="p-2 bg-brand-sky/10 rounded-lg text-brand-sky">
                   <Calendar className="w-5 h-5 animate-pulse" />
                 </span>
                 <div>
@@ -148,7 +148,7 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
             {/* Content Body */}
             <div className="p-6 space-y-8 flex-1 overflow-y-auto" id="trip-body">
               {/* Introduction Banner */}
-              <div className="bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl p-6 text-white relative overflow-hidden shadow-lg">
+              <div className="bg-gradient-to-br from-brand-navy to-brand-sky rounded-2xl p-6 text-white relative overflow-hidden shadow-lg">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl transform translate-x-8 -translate-y-8"></div>
                 <div className="relative z-10 space-y-3">
                   <span className="text-xs bg-white/20 px-3 py-1 rounded-full font-semibold uppercase tracking-wider">
@@ -157,16 +157,16 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                   <h3 className="text-2xl font-sans font-extrabold tracking-tight">
                     Compra Directo de Fábrica. Sin Intermediarios.
                   </h3>
-                  <p className="text-sm text-pink-50">
+                  <p className="text-sm text-blue-50/90">
                     Únete a nuestro grupo selecto de empresarios en un viaje presencial a Panamá. Descubre los mayores proveedores de textiles, calzado y gadgets de la Zona Libre de Colón.
                   </p>
                   <div className="grid grid-cols-2 gap-4 pt-3 text-xs border-t border-white/20">
                     <div className="flex items-center space-x-2">
-                      <MapPin className="w-4 h-4 text-pink-200" />
+                      <MapPin className="w-4 h-4 text-brand-sky" />
                       <span>Colón & Panamá Ciudad</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Users className="w-4 h-4 text-pink-200" />
+                      <Users className="w-4 h-4 text-brand-sky" />
                       <span>Cupos limitados (20 max)</span>
                     </div>
                   </div>
@@ -178,17 +178,17 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                   {/* Detailed Itinerary */}
                   <div className="space-y-4" id="trip-itinerary-section">
                     <h4 className="font-sans font-bold text-gray-800 text-base border-b pb-2 flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-pink-500" /> Itinerario de Sourcing
+                      <MapPin className="w-4 h-4 text-brand-sky" /> Itinerario de Sourcing
                     </h4>
-                    <div className="relative border-l border-pink-200 ml-4 pl-6 space-y-6">
+                    <div className="relative border-l border-brand-sky/20 ml-4 pl-6 space-y-6">
                       {itinerarySteps.map((step, idx) => (
                         <div key={idx} className="relative">
                           {/* Dot indicator */}
-                          <div className="absolute -left-[31px] top-1 bg-white border-2 border-pink-500 rounded-full w-4 h-4 flex items-center justify-center">
-                            <div className="bg-pink-500 rounded-full w-1.5 h-1.5" />
+                          <div className="absolute -left-[31px] top-1 bg-white border-2 border-brand-sky rounded-full w-4 h-4 flex items-center justify-center">
+                            <div className="bg-brand-sky rounded-full w-1.5 h-1.5" />
                           </div>
                           <div className="space-y-1">
-                            <span className="text-xs font-mono font-bold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-md">
+                            <span className="text-xs font-mono font-bold text-brand-sky bg-brand-sky/10 px-2 py-0.5 rounded-md">
                               {step.day}
                             </span>
                             <h5 className="font-bold text-gray-900 text-sm mt-1">{step.title}</h5>
@@ -200,9 +200,9 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                   </div>
 
                   {/* Booking / Interest Intake Form */}
-                  <div className="bg-pink-50/50 rounded-2xl p-6 border border-pink-100" id="trip-booking-form-section">
+                  <div className="bg-brand-sky/5 rounded-2xl p-6 border border-brand-sky/10" id="trip-booking-form-section">
                     <h4 className="font-sans font-bold text-gray-800 text-base mb-4 flex items-center gap-2">
-                      <Ticket className="w-4 h-4 text-pink-500" /> Pre-Registro y Solicitud de Vacante
+                      <Ticket className="w-4 h-4 text-brand-sky" /> Pre-Registro y Solicitud de Vacante
                     </h4>
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div>
@@ -213,7 +213,7 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                           value={booking.name}
                           onChange={(e) => setBooking({ ...booking, name: e.target.value })}
                           placeholder="Tu nombre y apellido"
-                          className="w-full text-sm bg-white border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition"
+                          className="w-full text-sm bg-white border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-brand-sky focus:border-transparent transition"
                         />
                       </div>
 
@@ -226,7 +226,7 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                             value={booking.email}
                             onChange={(e) => setBooking({ ...booking, email: e.target.value })}
                             placeholder="nombre@correo.com"
-                            className="w-full text-sm bg-white border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition"
+                            className="w-full text-sm bg-white border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-brand-sky focus:border-transparent transition"
                           />
                         </div>
                         <div>
@@ -237,7 +237,7 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                             value={booking.whatsapp}
                             onChange={(e) => setBooking({ ...booking, whatsapp: e.target.value })}
                             placeholder="+507 6000-0000"
-                            className="w-full text-sm bg-white border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition"
+                            className="w-full text-sm bg-white border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-brand-sky focus:border-transparent transition"
                           />
                         </div>
                       </div>
@@ -257,12 +257,12 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                                 onClick={() => handleCategoryToggle(cat)}
                                 className={`text-left text-xs p-2.5 rounded-xl border transition-all flex items-center space-x-2 ${
                                   isSelected
-                                    ? "bg-pink-500 text-white border-pink-500 shadow-md shadow-pink-500/20"
+                                    ? "bg-brand-sky text-white border-brand-sky shadow-md shadow-brand-sky/25"
                                     : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
                                 }`}
                               >
                                 <span className={`w-3 h-3 rounded-full border flex items-center justify-center ${isSelected ? "border-white bg-white" : "border-gray-400"}`}>
-                                  {isSelected && <span className="bg-pink-500 rounded-full w-1 h-1" />}
+                                  {isSelected && <span className="bg-brand-sky rounded-full w-1 h-1" />}
                                 </span>
                                 <span className="truncate">{cat}</span>
                               </button>
@@ -270,7 +270,7 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                           })}
                         </div>
                         {categoriesError && (
-                          <p className="text-rose-500 text-xs mt-1 font-medium">{categoriesError}</p>
+                          <p className="text-red-500 text-xs mt-1 font-medium">{categoriesError}</p>
                         )}
                       </div>
 
@@ -285,7 +285,7 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                             onClick={() => setBooking({ ...booking, hasImportedBefore: true })}
                             className={`flex-1 text-center py-2 text-xs font-semibold rounded-xl border transition ${
                               booking.hasImportedBefore
-                                ? "bg-pink-100 text-pink-700 border-pink-400 font-bold"
+                                ? "bg-brand-sky/10 text-brand-navy border-brand-sky/35 font-bold"
                                 : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
                             }`}
                           >
@@ -296,7 +296,7 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                             onClick={() => setBooking({ ...booking, hasImportedBefore: false })}
                             className={`flex-1 text-center py-2 text-xs font-semibold rounded-xl border transition ${
                               !booking.hasImportedBefore
-                                ? "bg-pink-100 text-pink-700 border-pink-400 font-bold"
+                                ? "bg-brand-sky/10 text-brand-navy border-brand-sky/35 font-bold"
                                 : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
                             }`}
                           >
@@ -307,7 +307,7 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
 
                       <button
                         type="submit"
-                        className="w-full bg-pink-500 hover:bg-pink-600 text-white text-sm font-semibold rounded-xl py-3 shadow-lg shadow-pink-500/20 hover:shadow-pink-500/30 transition-all flex items-center justify-center space-x-2"
+                        className="w-full bg-brand-navy hover:bg-brand-navy/95 text-white text-sm font-semibold rounded-xl py-3 shadow-lg shadow-brand-navy/10 transition-all flex items-center justify-center space-x-2"
                         id="submit-trip-booking"
                       >
                         <Ticket className="w-4 h-4" />
@@ -341,16 +341,16 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                     <div className="absolute right-0 top-[60%] w-6 h-12 bg-white rounded-l-full translate-x-3 -translate-y-6"></div>
 
                     {/* Top ticket header */}
-                    <div className="p-6 bg-gradient-to-r from-pink-500 to-rose-600 pb-8 flex justify-between items-start">
+                    <div className="p-6 bg-gradient-to-r from-brand-navy to-brand-sky pb-8 flex justify-between items-start">
                       <div>
                         <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded uppercase tracking-wider font-semibold">
                           PRE-EMBARQUE
                         </span>
                         <h5 className="font-extrabold text-xl mt-1 tracking-tight">VIP SOURCING</h5>
-                        <p className="text-[10px] text-pink-100 font-mono mt-0.5">EMPRENDELANDIA NETWORKS</p>
+                        <p className="text-[10px] text-blue-50/80 font-mono mt-0.5">EMPRENDELANDIA NETWORKS</p>
                       </div>
                       <div className="text-right">
-                        <span className="font-mono text-xs text-pink-100">CUPÓN</span>
+                        <span className="font-mono text-xs text-blue-50/80">CUPÓN</span>
                         <p className="font-mono font-bold text-base text-yellow-300">#PAN2026</p>
                       </div>
                     </div>
@@ -389,7 +389,7 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                     <div className="p-6 pt-4 bg-slate-950 flex justify-between items-center bg-opacity-40">
                       <div>
                         <span className="text-[10px] text-slate-500 block uppercase font-mono">CONTACTO WHATSAPP</span>
-                        <p className="font-mono text-xs font-bold text-pink-400">{booking.whatsapp}</p>
+                        <p className="font-mono text-xs font-bold text-brand-sky">{booking.whatsapp}</p>
                       </div>
                       <div className="flex flex-col items-end">
                         {/* Mock vertical barcode stripes in CSS */}
