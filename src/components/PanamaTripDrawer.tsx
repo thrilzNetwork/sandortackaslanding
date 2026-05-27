@@ -347,7 +347,7 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                           PRE-EMBARQUE
                         </span>
                         <h5 className="font-extrabold text-xl mt-1 tracking-tight">VIP SOURCING</h5>
-                        <p className="text-[10px] text-blue-50/80 font-mono mt-0.5">EMPRENDELANDIA NETWORKS</p>
+                        <p className="text-[10px] text-blue-50/80 font-mono mt-0.5">ST IMPORTACIONES</p>
                       </div>
                       <div className="text-right">
                         <span className="font-mono text-xs text-blue-50/80">CUPÓN</span>
@@ -413,7 +413,7 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                   <div className="flex space-x-3 max-w-sm mx-auto justify-center">
                     <button
                       onClick={() => {
-                        const message = `¡Hola EMPRENDELANDIA! Ya hice mi pre-registro para el Viaje de Sourcing a Panamá 2026. Mi nombre es ${booking.name} y me interesa importar. ¿Podrían confirmarme los cupos hoteleros disponibles?`;
+                        const message = `¡Hola ST IMPORTACIONES! Ya hice mi pre-registro para el Viaje de Sourcing a Panamá 2026. Mi nombre es ${booking.name} y me interesa importar. ¿Podrían confirmarme los cupos hoteleros disponibles?`;
                         window.open(`https://wa.me/${booking.whatsapp.replace(/\+/g, "") || "50760000000"}?text=${encodeURIComponent(message)}`, "_blank");
                       }}
                       className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-xs py-2 px-4 rounded-xl shadow-lg transition"

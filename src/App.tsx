@@ -63,17 +63,17 @@ export default function App() {
           {/* Core Branding Typography */}
           <div className="space-y-1">
             <h1 className="font-display font-black text-2xl text-brand-navy tracking-wider uppercase">
-              EMPRENDELANDIA
+              ST IMPORTACIONES
             </h1>
             <p className="text-xs text-brand-sky font-extrabold uppercase tracking-widest flex items-center justify-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-sky"></span>
-              Aduanas & Sourcing Mayorista
+              Soluciones Integrales de Importación
             </p>
           </div>
 
           {/* Brand Tagline matching original exactly */}
           <p className="text-sm text-gray-700 bg-white/70 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-gray-100 shadow-sm leading-relaxed max-w-sm mx-auto">
-            ✈️ Te ayudo a importar y ganar comisiones en USD 💸 desde 🏡.
+            ✈️ Te ayudamos a importar de forma segura y eficiente desde cualquier parte del mundo. 📦
           </p>
         </section>
 
@@ -288,13 +288,13 @@ export default function App() {
 
         {/* Footer Brand Credentials */}
         <footer className="text-center text-gray-400 text-[10px] pt-4 font-mono uppercase tracking-wider space-y-1">
-          <p>© 2026 EMPRENDELANDIA NETWORKS</p>
+          <p>© 2026 ST IMPORTACIONES</p>
           <div className="flex justify-center space-x-2 text-gray-300">
-            <span>IMPORTACIONES</span>
+            <span>ADUANAS</span>
             <span>•</span>
-            <span>MARKETING AFILIADO</span>
+            <span>LOGÍSTICA</span>
             <span>•</span>
-            <span>COMISIONES</span>
+            <span>DISTRIBUCIÓN</span>
           </div>
         </footer>
 

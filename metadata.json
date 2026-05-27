@@ -1,6 +1,6 @@
 {
-  "name": "Emprendelandia Link Hub",
-  "description": "Interactive Link-in-bio platform with importing calculators, travel planners, and an AI consultant.",
+  "name": "ST Importaciones",
+  "description": "Soluciones integrales de importación. Herramientas de flete, calculadora de pacas e importaciones personalizadas.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

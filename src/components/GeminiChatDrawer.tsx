@@ -13,7 +13,7 @@ export default function GeminiChatDrawer({ isOpen, onClose }: GeminiChatDrawerPr
     {
       id: "welcome",
       role: "assistant",
-      content: "¡Hola! Soy tu Asistente Empresarial de EMPRENDELANDIA. 👑 Te guío en cómo funcionan nuestras importaciones de Pacas de Shein, Zara, Pat Pat o cómo unirte a nuestro espectacular Viaje de Negocios a Panamá del 14 al 20 de Junio de 2026. ¿Qué te gustaría saber hoy?",
+      content: "¡Hola! Soy tu Asistente Empresarial de ST IMPORTACIONES. ⚡ Te guío en cómo funcionan nuestras importaciones de Pacas de Shein, Zara, Pat Pat o cómo unirte a nuestro espectacular Viaje de Negocios a Panamá del 14 al 20 de Junio de 2026. ¿Qué te gustaría saber hoy?",
     },
   ]);
   const [inputValue, setInputValue] = useState("");

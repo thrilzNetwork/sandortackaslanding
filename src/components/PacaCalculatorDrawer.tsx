@@ -75,7 +75,7 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
   }, [quantity, vendor, shippingMode, customCostPerPiece, taxRate, customSellingPrice, averageWeight]);
 
   const copyToClipboard = () => {
-    const textToCopy = `COTIZACIÓN ESTIMADA DE IMPORTACIÓN - EMPRENDELANDIA
+    const textToCopy = `COTIZACIÓN ESTIMADA DE IMPORTACIÓN - ST IMPORTACIONES
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🛒 Proveedor: Pacas de ${vendor}
 👕 Cantidad de Prendas: ${quantity} unidades
@@ -366,7 +366,7 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
                 </button>
                 <button
                   onClick={() => {
-                    const message = `¡Hola EMPRENDELANDIA! Utilicé la calculadora de pacas. Estoy interesado en un lote de ${quantity} prendas de ${vendor} vía ${shippingMode === "air" ? "aéreo" : "marítimo"}. Mis ganancias estimadas son de $${stats.netProfit.toFixed(2)} USD con un ROI del ${stats.roiPercent}%. ¿Me ayudan a concretar este pedido?`;
+                    const message = `¡Hola ST IMPORTACIONES! Utilicé la calculadora de pacas. Estoy interesado en un lote de ${quantity} prendas de ${vendor} vía ${shippingMode === "air" ? "aéreo" : "marítimo"}. Mis ganancias estimadas son de $${stats.netProfit.toFixed(2)} USD con un ROI del ${stats.roiPercent}%. ¿Me ayudan a concretar este pedido?`;
                     window.open(`https://wa.me/50760000000?text=${encodeURIComponent(message)}`, "_blank");
                   }}
                   className="flex-1 bg-brand-navy hover:brightness-110 text-white font-semibold text-xs py-3 px-4 rounded-xl flex items-center justify-center space-x-2 shadow-lg shadow-brand-navy/10 transition-all"
