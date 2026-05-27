@@ -13,7 +13,7 @@ export default function GeminiChatDrawer({ isOpen, onClose }: GeminiChatDrawerPr
     {
       id: "welcome",
       role: "assistant",
-      content: "¡Hola! Soy tu Asistente Empresarial de ST IMPORTACIONES. ⚡ Te guío en cómo funcionan nuestras importaciones de Pacas de Shein, Zara, Pat Pat o cómo unirte a nuestro espectacular Viaje de Negocios a Panamá del 14 al 20 de Junio de 2026. ¿Qué te gustaría saber hoy?",
+      content: "¡Hola! Soy tu Asistente de Sourcing y Logística en ST IMPORTACIONES. ⚡ Te guío en cómo funcionan tus importaciones de Amazon, eBay, Shein o Zara, y cómo unirte a nuestro espectacular Viaje de Negocios a China 2026 (Guangzhou & Yiwu). ¿Qué mercancía o producto te gustaría cotizar hoy?",
     },
   ]);
   const [inputValue, setInputValue] = useState("");
@@ -22,9 +22,9 @@ export default function GeminiChatDrawer({ isOpen, onClose }: GeminiChatDrawerPr
 
   const quickPrompts = [
     "🇨🇳 ¿Cómo importo de China fácil?",
-    "✈️ Costos flete de pacas de Shein",
-    "🇵🇦 Detalle del Viaje a Panamá 2026",
-    "👶 ¿Qué conviene más, Zara o Pat Pat?",
+    "📦 Costos flete de Amazon o eBay",
+    "⛩️ Info sobre el Viaje a China 2026",
+    "👔 ¿Qué mercancía tiene mejor margen?",
   ];
 
   const scrollToBottom = () => {

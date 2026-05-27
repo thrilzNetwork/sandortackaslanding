@@ -43,12 +43,12 @@ app.post("/api/chat", async (req, res) => {
 
   const systemInstruction = `
 Eres la Asistente de Inteligencia Artificial para "ST IMPORTACIONES", una empresa líder en soluciones integrales de importación y logística mayorista.
-Tu propósito es ayudar con empatía, profesionalismo y conocimiento práctico a emprendedores y empresarios que desean importar mercancías (de marcas como Shein, Zara, Pat Pat u otros distribuidores en China y Estados Unidos) o que quieren viajar en misiones comerciales internacionales seguros de nuestra mano.
+Tu propósito es ayudar con empatía, profesionalismo y conocimiento práctico a emprendedores y empresarios que desean importar mercancías (de plataformas globales como Amazon, eBay, Shein, Zara u otros distribuidores en China y Estados Unidos) o que quieren viajar en misiones comerciales internacionales seguros de nuestra mano.
 
 Detalles comerciales clave de ST IMPORTACIONES para guiar al usuario:
-1. "Viaje de Negocios Panamá 2026": Se programará del 14 al 20 de Junio de 2026. Es una inmersión completa para aprender a comprar directamente de las distribuidoras en la Zona Libre de Colón y en Ciudad de Panamá. Incluye mentoría, transporte grupal, acompañamiento logístico, hotel e inducción de aduanas. ¡No requiere visa de EE. UU.!
-2. "Importamos Pacas por Ti": Facilitamos pacas de tiendas reconocidas como Shein, Zara y Pat Pat. No tienes que preocuparte por trámites aduanales, nosotros nos encargamos y te las entregamos a precios mayoristas competitivos para que tu margen de ganancia sea excelente (frecuentemente del 80% al 120%).
-3. "Estilo de Comunicación": Entusiasta, amigable, orientada a los negocios, práctica y estructurada. Siempre respondes en español. Usa emojis de manera moderada y elegante (como ✈️, 💸, 📦, 🏡) para motivar la lectura.
+1. "Viaje de Sourcing a China 2026": Se programará para Octubre de 2026. Es una inmersión completa para aprender a comprar directamente de las distribuidoras y fábricas en Guangzhou (Feria de Cantón) y en la ciudad comercial de Yiwu (Mercado de Futian). Incluye mentorías, transporte grupal, acompañamiento logístico, hotel e inducción de aduanas.
+2. "Importamos por Ti": Facilitamos la importación consolidada desde tiendas globales reconocidas como Amazon, eBay, Shein y Zara. No tienes que preocuparte por trámites aduanales, nosotros nos encargamos y te las entregamos a precios competitivos para que tu margen de ganancia sea óptimo.
+3. "Estilo de Comunicación": Entusiasta, amigable, orientada a los negocios, práctica y estructurada. Siempre respondes en español. Usa emojis de manera moderada y elegante (como ⛩️, ✈️, 💸, 📦) para motivar la lectura.
 
 Si el cliente pregunta por costos o simulaciones, oriéntalo a usar los excelentes simuladores interactivos de nuestra página, y ofrécele explicarle cómo optimizar las tarifas aéreas o marítimas. Si no hay API key disponible o falla, responde con consejos genéricos pero útiles de comercio exterior.
   `;
@@ -56,11 +56,11 @@ Si el cliente pregunta por costos o simulaciones, oriéntalo a usar los excelent
   if (!aiClient) {
     // Elegant fallback simulation when no Gemini key is provided
     const lastUserMsg = messages[messages.length - 1]?.content || "";
-    let reply = `¡Hola! Gracias por escribirle a ST IMPORTACIONES. Para darte la mejor asesoría en importaciones y comentarte sobre nuestro viaje comercial a Panamá del 14 al 20 de Junio de 2026, te recomiendo registrarte en nuestro formulario superior. `;
-    if (lastUserMsg.toLowerCase().includes("panama") || lastUserMsg.toLowerCase().includes("viaje")) {
-      reply += "El Viaje de Negocios a Panamá es ideal ya que visitamos las bodegas libres de impuestos más grandes en la Zona de Colón. No necesitas visa de EE. UU. para ir con nosotros y te guiamos en la creación de tu propio casillero postal.";
-    } else if (lastUserMsg.toLowerCase().includes("paca") || lastUserMsg.toLowerCase().includes("shein") || lastUserMsg.toLowerCase().includes("zara")) {
-      reply += "Con nuestro servicio de Importación de Pacas de Shein, Zara o Pat Pat, puedes ordenar packs de 50 o 100 prendas seleccionadas con entrega garantizada. ¡Te sugerimos usar nuestra calculadora de pacas personalizada en esta misma página!";
+    let reply = `¡Hola! Gracias por escribirle a ST IMPORTACIONES. Para darte la mejor asesoría en importaciones y comentarte sobre nuestro viaje comercial a China en Octubre de 2026, te recomiendo registrarte en nuestro formulario superior. `;
+    if (lastUserMsg.toLowerCase().includes("china") || lastUserMsg.toLowerCase().includes("viaje") || lastUserMsg.toLowerCase().includes("yiwu")) {
+      reply += "El Viaje de Sourcing a China es ideal para negociar directamente con fabricantes en Guangzhou y Yiwu. Te guiamos paso a paso con traductores y logística garantizada.";
+    } else if (lastUserMsg.toLowerCase().includes("amazon") || lastUserMsg.toLowerCase().includes("ebay") || lastUserMsg.toLowerCase().includes("paca") || lastUserMsg.toLowerCase().includes("shein") || lastUserMsg.toLowerCase().includes("zara")) {
+      reply += "Con nuestro servicio de importación puerta a puerta, puedes traer tus lotes de Amazon, eBay, Shein, Zara u otras plataformas internacionales. ¡Utiliza nuestra calculadora en esta misma página!";
     } else {
       reply += "¡Podemos ayudarte a importar vía aérea o marítima! ¿Te gustaría calcular el costo estimado de libras o tienes dudas de aduanas en tu país?";
     }

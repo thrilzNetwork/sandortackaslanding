@@ -132,25 +132,12 @@ export default function App() {
               <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
             </svg>
           </a>
-
-          {/* Threads */}
-          <a
-            href="https://threads.net"
-            target="_blank"
-            rel="noreferrer"
-            className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-115 transition-transform duration-200 border border-gray-100 shadow-sm text-gray-900"
-            aria-label="Threads"
-          >
-            <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M12.28 2.2C6.83 2.2 2.45 6.45 2.2 11.89c.14 5.31 4.56 9.4 9.87 9.4 3.01 0 5.62-1.34 7.28-3.41l-2.48-1.57c-1.12 1.34-2.84 2.18-4.8 2.18-3.32 0-6.12-2.47-6.57-5.75h14.36c.15-.81.25-1.63.25-2.49 0-5.31-4.22-9.45-9.63-9.55-.07 0-.13-.01-.2-.01zM8.88 10.42c.45-3.23 3.16-5.61 6.51-5.61 3.23 0 5.86 2.24 6.46 5.61H8.88z" />
-            </svg>
-          </a>
         </section>
 
         {/* Core Link-In-Bio Button Stack */}
         <section className="space-y-4" id="links-stack">
           
-          {/* Button 1: VIAJE DE NEGOCIOS PANAMA */}
+          {/* Button 1: VIAJE DE NEGOCIOS CHINA */}
           <motion.button
             whileHover={{ scale: 1.015 }}
             whileTap={{ scale: 0.985 }}
@@ -167,10 +154,10 @@ export default function App() {
             {/* Text details */}
             <div className="flex-grow">
               <h3 className="font-sans font-extrabold text-sm md:text-base leading-tight uppercase tracking-tight">
-                VIAJE DE NEGOCIOS PANAMA 2026
+                VIAJE DE NEGOCIOS CHINA 2026
               </h3>
               <p className="text-[10px] text-brand-sky/80 uppercase tracking-widest font-semibold mt-0.5 font-mono">
-                Misión de Sourcing • Del 14 al 20 de Junio 2026
+                Misión de Sourcing • Importa de Cantón & Yiwu
               </p>
             </div>
           </motion.button>
@@ -191,10 +178,10 @@ export default function App() {
             </div>
             <div className="flex-grow">
               <h3 className="font-sans font-extrabold text-sm md:text-base leading-tight uppercase tracking-tight">
-                IMPORTAMOS PACAS POR TI
+                IMPORTAMOS POR TI
               </h3>
               <p className="text-[10px] text-brand-sky/80 uppercase tracking-widest font-semibold mt-0.5 font-mono">
-                Calculadora Lotes • Zara, Shein & Pat Pat
+                Amazon, eBay, Shein, Zara & más
               </p>
             </div>
           </motion.button>

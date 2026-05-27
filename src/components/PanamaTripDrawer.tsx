@@ -71,33 +71,33 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
   const itinerarySteps = [
     {
       day: "DÍA 1",
-      title: "Llegada y Bienvenida VIP",
-      desc: "Recibimiento en aeropuerto, check-in en el hotel seleccionado y cóctel de bienvenida con la primera mentoría de negocios grupal.",
+      title: "Llegada a Guangzhou & Recibimiento VIP",
+      desc: "Recepción en el aeropuerto de Guangzhou Baiyun, traslado al hotel de 5 estrellas seleccionado y cena de bienvenida con introducción al Sourcing en China.",
     },
     {
       day: "DÍA 2",
-      title: "Ruta de Bodegas en Ciudad de Panamá",
-      desc: "Visita exclusiva a los showrooms mayoristas de tecnología, cosméticos y marcas premium en el centro comercial de la capital.",
+      title: "Feria de Cantón (Canton Fair) o Showrooms Mayoristas",
+      desc: "Visita guiada al complejo de la Feria de Cantón o centros de diseño más vanguardistas de ropa, calzado y accesorios premium.",
     },
     {
       day: "DÍA 3",
-      title: "Inmersión Zona Libre de Colón",
-      desc: "Traslado al puerto libre de impuestos más grande de América Latina. Recorrido con agentes autorizados de bodegas masivas.",
+      title: "Inmersión en el Mercado de Yiwu (Futian)",
+      desc: "Recorrido privado por el mercado mayorista más grande del mundo. Sourcing de papelería, juguetes, ferretería y decoración para Amazon y eBay.",
     },
     {
       day: "DÍA 4",
-      title: "Negociaciones y Consolidación",
-      desc: "Contacto directo con dueños de fábricas, acuerdos de fletes, tarifas especiales grupal y apertura de casillero postal.",
+      title: "Visita a Fábricas & Negociación de Precios",
+      desc: "Acceso exclusivo a fábricas socias en la provincia de Guangdong y Zhejiang. Acuerdos de producción personalizada (OEM/ODM) y control de calidad.",
     },
     {
       day: "DÍA 5",
-      title: "Logística y Taller de Desaduanamiento",
-      desc: "Taller teórico-práctico presencial: Cómo registrar tu importación, pago de tributos arancelarios y transporte seguro a tu país.",
+      title: "Logística internacional y Consolidación de Carga",
+      desc: "Configuración de tu agente de carga (Freight Forwarder). Desglose de contenedores completos (FCL), carga consolidada (LCL) y aduanas.",
     },
     {
       day: "DÍA 6",
-      title: "Networking y Certificación de Socios",
-      desc: "Almuerzo de gala frente al Canal de Panamá, entrega de certificados de agentes mayoristas y plan de acción definitivo.",
+      title: "Certificación y Alianza Comercial",
+      desc: "Almuerzo de negocios, entrega de certificación de importadores oficiales de China y plan de acción personalizado listo para despachar.",
     },
   ];
 
@@ -131,8 +131,8 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                   <Calendar className="w-5 h-5 animate-pulse" />
                 </span>
                 <div>
-                  <h2 className="font-sans font-bold text-lg text-gray-900 tracking-tight">Viaje de Negocios Panamá 2026</h2>
-                  <p className="text-xs font-mono text-gray-500">Del 14 al 20 de Junio de 2026</p>
+                  <h2 className="font-sans font-bold text-lg text-gray-900 tracking-tight">Viaje de Negocios China 2026</h2>
+                  <p className="text-xs font-mono text-gray-500">Misión Especial Canton Fair & Yiwu</p>
                 </div>
               </div>
               <button
@@ -142,7 +142,7 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                 id="close-trip-drawer"
               >
                 <X className="w-6 h-6" />
-              </button>
+               </button>
             </div>
 
             {/* Content Body */}
@@ -158,16 +158,16 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                     Compra Directo de Fábrica. Sin Intermediarios.
                   </h3>
                   <p className="text-sm text-blue-50/90">
-                    Únete a nuestro grupo selecto de empresarios en un viaje presencial a Panamá. Descubre los mayores proveedores de textiles, calzado y gadgets de la Zona Libre de Colón.
+                    Únete a nuestro grupo selecto de empresarios en un viaje presencial a China. Descubre los mayores proveedores de textiles, tecnología, calzado y gadgets en Guangzhou y la ciudad comercial de Yiwu.
                   </p>
                   <div className="grid grid-cols-2 gap-4 pt-3 text-xs border-t border-white/20">
                     <div className="flex items-center space-x-2">
                       <MapPin className="w-4 h-4 text-brand-sky" />
-                      <span>Colón & Panamá Ciudad</span>
+                      <span>Guangzhou & Yiwu, China</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Users className="w-4 h-4 text-brand-sky" />
-                      <span>Cupos limitados (20 max)</span>
+                      <span>Cupos limitados (15 max)</span>
                     </div>
                   </div>
                 </div>
@@ -351,7 +351,7 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                       </div>
                       <div className="text-right">
                         <span className="font-mono text-xs text-blue-50/80">CUPÓN</span>
-                        <p className="font-mono font-bold text-base text-yellow-300">#PAN2026</p>
+                        <p className="font-mono font-bold text-base text-yellow-300">#CHN2026</p>
                       </div>
                     </div>
 
@@ -365,11 +365,11 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                       <div className="grid grid-cols-2 gap-4">
                         <div>
                           <span className="text-[10px] text-slate-400 block uppercase font-semibold font-mono">DESTINO</span>
-                          <span className="font-bold text-sm text-white">Zona Libre de Colón</span>
+                          <span className="font-bold text-sm text-white">Guangzhou & Yiwu</span>
                         </div>
                         <div>
                           <span className="text-[10px] text-slate-400 block uppercase font-semibold font-mono">FECHAS</span>
-                          <span className="font-bold text-xs text-white">14-20 Jun, 2026</span>
+                          <span className="font-bold text-xs text-white">Octubre, 2026</span>
                         </div>
                       </div>
 
@@ -413,7 +413,7 @@ export default function PanamaTripDrawer({ isOpen, onClose }: PanamaTripDrawerPr
                   <div className="flex space-x-3 max-w-sm mx-auto justify-center">
                     <button
                       onClick={() => {
-                        const message = `¡Hola ST IMPORTACIONES! Ya hice mi pre-registro para el Viaje de Sourcing a Panamá 2026. Mi nombre es ${booking.name} y me interesa importar. ¿Podrían confirmarme los cupos hoteleros disponibles?`;
+                        const message = `¡Hola ST IMPORTACIONES! Ya hice mi pre-registro para el Viaje de Sourcing a China 2026. Mi nombre es ${booking.name} y me interesa importar de Cantón & Yiwu. ¿Podrían confirmarme los cupos y requisitos de viaje?`;
                         window.open(`https://wa.me/${booking.whatsapp.replace(/\+/g, "") || "50760000000"}?text=${encodeURIComponent(message)}`, "_blank");
                       }}
                       className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-xs py-2 px-4 rounded-xl shadow-lg transition"

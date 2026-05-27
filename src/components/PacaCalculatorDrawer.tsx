@@ -9,18 +9,24 @@ interface PacaCalculatorDrawerProps {
 }
 
 export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculatorDrawerProps) {
-  const [vendor, setVendor] = useState<VendorType>("Shein");
+  const [vendor, setVendor] = useState<VendorType>("Amazon");
   const [quantity, setQuantity] = useState<number>(100);
   const [shippingMode, setShippingMode] = useState<"air" | "sea">("air");
-  const [customCostPerPiece, setCustomCostPerPiece] = useState<number>(3.5);
+  const [customCostPerPiece, setCustomCostPerPiece] = useState<number>(4.5);
   const [taxRate, setTaxRate] = useState<number>(12); // percent
-  const [customSellingPrice, setCustomSellingPrice] = useState<number>(15);
+  const [customSellingPrice, setCustomSellingPrice] = useState<number>(20);
   const [copied, setCopied] = useState(false);
 
   // Auto defaults when changing vendor
   const handleVendorChange = (v: VendorType) => {
     setVendor(v);
-    if (v === "Shein") {
+    if (v === "Amazon") {
+      setCustomCostPerPiece(4.5);
+      setCustomSellingPrice(20);
+    } else if (v === "eBay") {
+      setCustomCostPerPiece(3.9);
+      setCustomSellingPrice(18);
+    } else if (v === "Shein") {
       setCustomCostPerPiece(3.2);
       setCustomSellingPrice(15);
     } else if (v === "Zara") {
@@ -34,6 +40,8 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
 
   // Average weight per piece (lbs)
   const averageWeight = useMemo(() => {
+    if (vendor === "Amazon") return 0.8;
+    if (vendor === "eBay") return 0.7;
     if (vendor === "Shein") return 0.4;
     if (vendor === "Zara") return 0.6;
     return 0.35; // Pat Pat
@@ -135,8 +143,8 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
                   <Calculator className="w-5 h-5 animate-pulse" />
                 </span>
                 <div>
-                  <h2 className="font-sans font-bold text-lg text-gray-900 tracking-tight">Simulador de Pacas Importadas</h2>
-                  <p className="text-xs font-mono text-gray-500">Shein, Zara & Pat Pat Por Ti</p>
+                  <h2 className="font-sans font-bold text-lg text-gray-900 tracking-tight">Simulador de Importación por Lotes</h2>
+                  <p className="text-xs font-mono text-gray-500">Amazon, eBay, Shein, Zara & más</p>
                 </div>
               </div>
               <button
@@ -154,20 +162,22 @@ export default function PacaCalculatorDrawer({ isOpen, onClose }: PacaCalculator
               {/* Select Vendor and Quantity */}
               <div className="space-y-4">
                 <h4 className="font-sans font-bold text-gray-800 text-sm flex items-center gap-1.5">
-                  <ShoppingBag className="w-4 h-4 text-brand-sky" /> 1. Elige tu Marca & Proveedor
+                  <ShoppingBag className="w-4 h-4 text-brand-sky" /> 1. Elige tu Marca, Tienda o Proveedor
                 </h4>
-                <div className="grid grid-cols-3 gap-2">
-                  {(["Shein", "Zara", "Pat Pat"] as VendorType[]).map((v) => (
+                <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+                  {(["Amazon", "eBay", "Shein", "Zara", "Pat Pat"] as VendorType[]).map((v) => (
                     <button
                       key={v}
                       type="button"
                       onClick={() => handleVendorChange(v)}
-                      className={`py-3 px-1.5 text-xs font-bold rounded-xl border text-center transition-all ${
+                      className={`py-3 px-1 text-xs font-bold rounded-xl border text-center transition-all cursor-pointer ${
                         vendor === v
                           ? "bg-brand-sky text-white border-brand-sky shadow-lg shadow-brand-sky/20"
                           : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
                       }`}
                     >
+                      {v === "Amazon" && "📦 "}
+                      {v === "eBay" && "🛍️ "}
                       {v === "Shein" && "✨ "}
                       {v === "Zara" && "👔 "}
                       {v === "Pat Pat" && "👶 "}

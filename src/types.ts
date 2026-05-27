@@ -1,4 +1,4 @@
-export type VendorType = "Shein" | "Zara" | "Pat Pat";
+export type VendorType = "Amazon" | "eBay" | "Shein" | "Zara" | "Pat Pat";
 
 export interface PacaCalculation {
   vendor: VendorType;
