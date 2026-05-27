@@ -1,0 +1,6 @@
+{
+  "name": "Emprendelandia Link Hub",
+  "description": "Interactive Link-in-bio platform with importing calculators, travel planners, and an AI consultant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
