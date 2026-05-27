@@ -46,11 +46,11 @@ export default function App() {
           {/* Main Hero Avatar illustration matching original */}
           <div className="relative inline-block" id="avatar-container">
             <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy to-brand-sky rounded-full blur-sm opacity-60 animate-pulse"></div>
-            <div className="relative w-28 h-28 bg-white p-[3px] rounded-full shadow-lg border border-brand-sky/20">
+            <div className="relative w-28 h-28 bg-white p-[3.5px] rounded-full shadow-lg border border-brand-sky/30">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=350&h=350"
-                alt="Emprendelandia Mentor"
-                className="w-full h-full object-cover rounded-full"
+                src="https://i.postimg.cc/6qg0TsZ2/00071ab0-4718-464a-9e7f-b230324da389.jpg"
+                alt="ST Importaciones Logo"
+                className="w-full h-full object-cover rounded-full bg-white"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -300,14 +300,7 @@ export default function App() {
 
       </main>
 
-      {/* Floating Beacons watermark to mimic the original app screen */}
-      <div className="fixed bottom-4 right-4 z-40 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-gray-150 shadow-md flex items-center space-x-1.5 cursor-pointer hover:bg-white transition-colors" id="beacons-watermark">
-        <svg className="w-3.5 h-3.5 text-gray-800 fill-current" viewBox="0 0 24 24">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
-        </svg>
-        <span className="text-[10px] font-bold text-gray-700">Beacons</span>
-        <span className="text-[10px] text-gray-400">| Try for free!</span>
-      </div>
+
 
       {/* Drawers / Overlays */}
       <PanamaTripDrawer 
