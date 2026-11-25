@@ -4,7 +4,7 @@
  */
 export const site = {
   brand: "ST Importaciones",
-  owner: "Sandor Tackas",
+  owner: "Sandor Takacs",
   photo: "https://i.postimg.cc/6qg0TsZ2/00071ab0-4718-464a-9e7f-b230324da389.jpg",
   tagline: "✈️ Te ayudamos a importar de forma segura y eficiente desde cualquier parte del mundo. 📦",
 
