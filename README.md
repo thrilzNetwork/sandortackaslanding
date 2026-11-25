@@ -1,20 +1,9 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# ST Importaciones
 
-# Run and deploy your AI Studio app
+Link page for Sandor Tackas / ST Importaciones. Vite + React + Tailwind, hosted on Netlify.
 
-This contains everything you need to run your app locally.
+- `src/config.ts`: WhatsApp number, social links, trip details and calculator rates.
+- `netlify/functions/chat.mts`: assistant at `/api/chat` (Gemini when `GEMINI_API_KEY` is set, built-in answers otherwise).
+- `public/__forms.html`: Netlify Forms definitions (`viaje`, `contacto`, `boletin`). Leads appear under Forms in Netlify.
 
-View your app in AI Studio: https://ai.studio/apps/226c85ca-889c-4569-95be-c6a3cf35b74c
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+`npm install`, `npm run dev`, `npm run build`.
