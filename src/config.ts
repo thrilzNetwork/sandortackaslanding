@@ -5,7 +5,7 @@
 export const site = {
   brand: "ST Importaciones",
   owner: "Sandor Takacs",
-  photo: "https://i.postimg.cc/6qg0TsZ2/00071ab0-4718-464a-9e7f-b230324da389.jpg",
+  photo: "/photo.jpg",
   tagline: "✈️ Te ayudamos a importar de forma segura y eficiente desde cualquier parte del mundo. 📦",
 
   // Digits only, country code first (Bolivia: 591XXXXXXXX). While empty,
